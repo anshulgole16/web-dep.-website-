@@ -27,7 +27,7 @@ export default function About() {
         >
           <div className="relative flex-shrink-0">
             <motion.img 
-              src="/src/assets/about logo photo .jpeg" 
+src="/assets/about logo photo .jpeg" 
               alt="Anshul Gole - Logo Photo" 
               className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-2xl shadow-primary/30 border-4 border-primary/20 cursor-pointer"
               initial={{ scale: 1, rotate: 0 }}
