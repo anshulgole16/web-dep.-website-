@@ -67,7 +67,7 @@ export default function Hero() {
             <Mail size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
           <button
-            onClick={() => scrollTo('#services')}
+onClick={() => scrollTo('#portfolio')}
             className="group flex items-center gap-2 px-8 py-4 bg-surface text-text-primary border border-border rounded-xl font-medium text-sm hover:border-border-hover hover:bg-surface-hover transition-all hover:scale-105 cursor-pointer"
           >
             🚀 View Live Projects

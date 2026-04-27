@@ -3,9 +3,11 @@ import { motion, useInView } from 'framer-motion'
 import { Star, Quote } from 'lucide-react'
 
 const defaultTestimonials = [
-  { name: 'Rahul S.', location: 'Gym Owner, Gwalior', rating: 5, text: 'Anshul delivered an amazing website for my gym business. Professional, fast, and great communication!' },
-  { name: 'Priya P.', location: 'Freelancer', rating: 5, text: 'Best developer I have worked with. My portfolio looks stunning and the animations are so smooth.' },
-  { name: 'Amit K.', location: 'E-commerce Store Owner', rating: 5, text: 'Great work on our store. Sales increased by 40% after the redesign. Highly recommended!' },
+  { name: 'Rajesh Sharma', location: 'Shop Owner, Lashkar Market, Gwalior', rating: 5, text: 'My clothing store website increased orders 3x within first month. Fast and professional!' },
+  { name: 'Dr. Priya Jain', location: 'Clinic Owner, Morar, Gwalior', rating: 5, text: 'Patients can now book appointments online easily. Excellent communication and reliable.' },
+  { name: 'Vikram Singh', location: 'Restaurant Owner, City Centre, Gwalior', rating: 5, text: 'Online orders doubled after new website. Anshul understands business needs perfectly.' },
+  { name: 'Neha Gupta', location: 'Tutor, Gwalior', rating: 5, text: 'My online classes platform looks professional and works flawlessly across devices.' },
+  { name: 'Amit Patel', location: 'Business Consultant, Madhya Pradesh', rating: 5, text: 'Delivered high-quality business site on time. Results exceeded expectations.' },
 ]
 
 export default function Testimonials() {

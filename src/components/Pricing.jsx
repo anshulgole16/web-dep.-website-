@@ -132,7 +132,7 @@ export default function Pricing() {
                 }`}
               >
                 <Phone size={16} />
-                📞 Book Free Call
+                 Book Free Call
               </button>
             </motion.div>
           ))}
