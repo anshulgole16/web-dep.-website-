@@ -48,13 +48,14 @@ export default function Hero() {
           Hi, I'm <span className="bg-primary bg-clip-text text-transparent">Anshul Gole</span>
         </motion.h1>
 
-        <motion.p variants={item} className="font-display text-xl md:text-2xl text-text-secondary font-medium mb-6">
-          Professional Web Developer
+        <motion.p variants={item} className="font-display text-xl md:text-2xl text-text-secondary font-medium mb-2">
+          I build websites that bring you real customers
         </motion.p>
-
-        <motion.p variants={item} className="text-text-muted text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-          I build beautiful, fast and modern websites for businesses and individuals. 
-          From business websites to full portfolios — I put my heart into every project.
+        <motion.p variants={item} className="text-text-muted text-base md:text-lg max-w-2xl mx-auto mb-2 leading-relaxed">
+          Get a high-converting website that helps your business grow online
+        </motion.p>
+        <motion.p variants={item} className="text-primary font-medium max-w-2xl mx-auto">
+          Trusted by local businesses in Gwalior
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap items-center justify-center gap-4 mb-16">
@@ -62,22 +63,22 @@ export default function Hero() {
             onClick={() => scrollTo('#contact')}
             className="group flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-xl font-medium text-sm hover:bg-primary-dark transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/25 cursor-pointer"
           >
-            Get In Touch
+            💬 Get Free Consultation
             <Mail size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
           <button
-            onClick={() => scrollTo('#portfolio')}
+            onClick={() => scrollTo('#services')}
             className="group flex items-center gap-2 px-8 py-4 bg-surface text-text-primary border border-border rounded-xl font-medium text-sm hover:border-border-hover hover:bg-surface-hover transition-all hover:scale-105 cursor-pointer"
           >
-            View My Work
+            🚀 View Live Projects
             <Briefcase size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </motion.div>
 
         <motion.div variants={item} className="flex items-center justify-center gap-12 md:gap-16">
           {[
-            { target: 8, label: 'Projects Done' },
-            { target: 15, label: 'Happy Clients' },
+            { target: 15, label: 'Projects Done' },
+            { target: 10, label: 'Happy Clients' },
             { target: 1, label: 'Years Exp' },
           ].map((stat, index) => (
             <AnimatedCounter key={stat.label} target={stat.target} delay={index * 0.2} label={stat.label} />

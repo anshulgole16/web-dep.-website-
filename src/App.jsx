@@ -8,8 +8,8 @@ import CustomCursor from './components/CustomCursor'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
-import Services from './components/Services'
 import Pricing from './components/Pricing'
+import Maintenance from './components/Maintenance'
 import Portfolio from './components/Portfolio'
 import Testimonials from './components/Testimonials'
 import About from './components/About'
@@ -92,8 +92,8 @@ function AppContent() {
       <main>
         <Hero />
         <Skills />
-        <Services />
         <Pricing />
+        <Maintenance />
         <Portfolio />
         <Testimonials />
         <About />

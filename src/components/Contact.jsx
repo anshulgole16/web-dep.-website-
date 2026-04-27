@@ -48,7 +48,13 @@ export default function Contact() {
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-text-primary mb-4">Contact Us</h2>
           <div className="w-12 h-1 bg-primary rounded-full mx-auto mb-4" />
-          <p className="text-text-secondary">Let's discuss your project — free consultation, no commitment</p>
+          <p className="text-text-secondary">Free consultation, no commitment</p>
+          <p className="text-primary font-semibold text-lg mt-2">
+            ⚡ Get response within 30 minutes on WhatsApp
+          </p>
+          <p className="text-primary font-semibold text-lg">
+            📞 Call or WhatsApp — fastest response guaranteed
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -89,7 +95,7 @@ export default function Contact() {
             />
             <input
               type="email"
-              placeholder="Email *"
+              placeholder="Email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full px-5 py-3.5 rounded-xl bg-surface border border-border text-text-primary placeholder-text-muted text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"

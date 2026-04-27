@@ -3,9 +3,9 @@ import { motion, useInView } from 'framer-motion'
 import { Star, Quote } from 'lucide-react'
 
 const defaultTestimonials = [
-  { name: 'Rahul Sharma', location: 'Mumbai', rating: 5, text: 'Anshul delivered an amazing website for my business. Professional, fast, and great communication throughout!' },
-  { name: 'Priya Patel', location: 'Delhi', rating: 5, text: 'Best developer I have worked with. My portfolio looks stunning and the animations are so smooth.' },
-  { name: 'Amit Kumar', location: 'Bangalore', rating: 4, text: 'Great work on our e-commerce store. Sales increased by 40% after the redesign. Highly recommended!' },
+  { name: 'Rahul S.', location: 'Gym Owner, Gwalior', rating: 5, text: 'Anshul delivered an amazing website for my gym business. Professional, fast, and great communication!' },
+  { name: 'Priya P.', location: 'Freelancer', rating: 5, text: 'Best developer I have worked with. My portfolio looks stunning and the animations are so smooth.' },
+  { name: 'Amit K.', location: 'E-commerce Store Owner', rating: 5, text: 'Great work on our store. Sales increased by 40% after the redesign. Highly recommended!' },
 ]
 
 export default function Testimonials() {
@@ -39,7 +39,7 @@ export default function Testimonials() {
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-text-primary mb-4">Client Feedback</h2>
           <div className="w-12 h-1 bg-primary rounded-full mx-auto mb-4" />
-          <p className="text-text-secondary">What my clients have to say</p>
+          <p className="text-text-secondary">Real results from real clients</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">

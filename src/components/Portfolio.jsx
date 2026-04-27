@@ -1,14 +1,14 @@
 import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { ExternalLink, ShoppingBag, Stethoscope, UtensilsCrossed, Rocket, GraduationCap, HardHat } from 'lucide-react'
+import { Phone } from 'lucide-react'
 
 const projects = [
-  { name: 'FashionHub Store', desc: 'E-commerce website with cart and payment', tag: 'React + Node', category: 'E-Commerce', color: 'from-violet-500/20 to-purple-500/20', icon: ShoppingBag },
-  { name: 'MediCare Clinic', desc: 'Doctor appointment booking system', tag: 'WordPress', category: 'Business', color: 'from-emerald-500/20 to-teal-500/20', icon: Stethoscope },
-  { name: 'TastyBites Restaurant', desc: 'Restaurant website with online menu', tag: 'HTML/CSS/JS', category: 'Business', color: 'from-amber-500/20 to-orange-500/20', icon: UtensilsCrossed },
-  { name: 'StartupLaunch', desc: 'Startup landing page with animations', tag: 'React', category: 'Landing', color: 'from-rose-500/20 to-pink-500/20', icon: Rocket },
-  { name: 'EduLearn Platform', desc: 'Online course website with dashboard', tag: 'MERN Stack', category: 'Business', color: 'from-sky-500/20 to-blue-500/20', icon: GraduationCap },
-  { name: 'BuildPro Agency', desc: 'Construction company portfolio', tag: 'HTML/CSS', category: 'Portfolio', color: 'from-lime-500/20 to-green-500/20', icon: HardHat },
+  { name: 'Clothing Store Website (Demo)', desc: 'Helps businesses sell products online with smooth checkout', category: 'E-Commerce' },
+  { name: 'Doctor Booking Website (Demo)', desc: 'Allows users to book appointments easily online', category: 'Business' },
+  { name: 'Restaurant Website (Demo)', desc: 'Helps restaurants receive online orders directly', category: 'Business' },
+  { name: 'Startup Landing Page (Demo)', desc: 'Converts visitors into leads with proven design', category: 'Landing' },
+  { name: 'EduLearn Platform (Demo)', desc: 'Online courses platform with student dashboard', category: 'Business' },
+  { name: 'BuildPro Agency (Demo)', desc: 'Showcases services to attract construction leads', category: 'Portfolio' },
 ]
 
 const filters = ['All', 'Business', 'E-Commerce', 'Portfolio', 'Landing']
@@ -17,8 +17,13 @@ export default function Portfolio() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
   const [activeFilter, setActiveFilter] = useState('All')
+  const phone = '918305995654'
 
   const filtered = activeFilter === 'All' ? projects : projects.filter((p) => p.category === activeFilter)
+
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/${phone}?text=I want a website like this`, '_blank')
+  }
 
   return (
     <section id="portfolio" className="py-24 px-6">
@@ -30,11 +35,13 @@ export default function Portfolio() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-text-primary mb-4">My Portfolio</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-text-primary mb-4">
+            Websites That Deliver Real Results
+          </h2>
           <div className="w-12 h-1 bg-primary rounded-full mx-auto mb-4" />
-          <p className="text-text-secondary mb-8">A selection of recent projects I have built</p>
+          <p className="text-text-secondary mb-4">See how I help businesses get more customers online</p>
 
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
             {filters.map((f) => (
               <button
                 key={f}
@@ -53,7 +60,7 @@ export default function Portfolio() {
 
         <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
-            {filtered.map((project) => (
+            {filtered.map((project, i) => (
               <motion.div
                 key={project.name}
                 layout
@@ -61,20 +68,25 @@ export default function Portfolio() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="group relative rounded-2xl overflow-hidden border border-border hover:border-border-hover bg-surface transition-all duration-300 hover:-translate-y-1"
+                className="group relative rounded-2xl overflow-hidden border border-border hover:border-primary transition-all duration-300 hover:-translate-y-1 flex flex-col"
               >
-                <div className={`h-40 bg-surface flex items-center justify-center bg-gradient-to-br ${project.color}`}>
-                  <project.icon size={48} className="text-text-secondary/50" />
+                <div className="h-40 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+                  <span className="text-slate-400 text-sm font-medium">Website Preview</span>
                 </div>
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-2">
-                    <h3 className="font-display text-lg font-semibold text-text-primary">{project.name}</h3>
-                    <ExternalLink size={16} className="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="p-6 flex flex-col gap-3 flex-1">
+                  <h3 className="font-display text-lg font-semibold text-text-primary">{project.name}</h3>
+                  <p className="text-text-secondary text-sm leading-relaxed flex-1">{project.desc}</p>
+                  <div className="buttons flex gap-3">
+                    <a href="#" className="demo-btn flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-surface text-text-primary border border-border rounded-lg text-sm font-medium hover:border-primary hover:bg-primary/5 transition-all">
+                      🌐 View Live
+                    </a>
+                    <button
+                      onClick={handleWhatsApp}
+                      className="cta-btn flex-1 px-4 py-2 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-lg text-sm hover:opacity-90 hover:shadow-lg hover:shadow-primary/25 transition-all"
+                    >
+                      💬 Get Similar
+                    </button>
                   </div>
-                  <p className="text-text-secondary text-sm mb-3">{project.desc}</p>
-                  <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
-                    {project.tag}
-                  </span>
                 </div>
               </motion.div>
             ))}
