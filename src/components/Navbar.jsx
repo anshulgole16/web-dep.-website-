@@ -17,10 +17,9 @@ export default function Navbar({ onFeedbackClick }) {
   const { theme, toggleTheme } = useTheme()
 const [mobileOpen, setMobileOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
-  const [activeSection, setActiveSection] = useState('')
-
 
   useEffect(() => {
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
