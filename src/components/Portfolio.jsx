@@ -3,12 +3,12 @@ import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { Phone } from 'lucide-react'
 
 const projects = [
-  { name: 'Clothing Store Website (Demo)', desc: 'Helps businesses sell products online with smooth checkout', category: 'E-Commerce' },
-  { name: 'Doctor Booking Website (Demo)', desc: 'Allows users to book appointments easily online', category: 'Business' },
-  { name: 'Restaurant Website (Demo)', desc: 'Helps restaurants receive online orders directly', category: 'Business' },
-  { name: 'Startup Landing Page (Demo)', desc: 'Converts visitors into leads with proven design', category: 'Landing' },
-  { name: 'EduLearn Platform (Demo)', desc: 'Online courses platform with student dashboard', category: 'Business' },
-  { name: 'BuildPro Agency (Demo)', desc: 'Showcases services to attract construction leads', category: 'Portfolio' },
+  { name: 'Clothing Store Website', desc: 'Helps businesses sell products online with smooth checkout', category: 'E-Commerce' },
+  { name: 'Doctor Booking Website', desc: 'Allows users to book appointments easily online', category: 'Business' },
+  { name: 'Restaurant Website', desc: 'Helps restaurants receive online orders directly', category: 'Business' },
+  { name: 'Startup Landing Page', desc: 'Converts visitors into leads with proven design', category: 'Landing' },
+  { name: 'EduLearn Platform', desc: 'Online courses platform with student dashboard', category: 'Business' },
+  { name: 'BuildPro Agency', desc: 'Showcases services to attract construction leads', category: 'Portfolio' },
 ]
 
 const filters = ['All', 'Business', 'E-Commerce', 'Portfolio', 'Landing']
