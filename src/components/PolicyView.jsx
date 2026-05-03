@@ -221,12 +221,17 @@ const policies = {
 
 export default function PolicyView({ policyType, onClose }) {
   useEffect(() => {
+    if (!policyType || !policies[policyType]) return;
+    
+    // Save original overflow so we don't break Lenis or other styles
+    const originalOverflow = document.body.style.overflow;
     window.scrollTo({ top: 0, behavior: 'instant' })
     document.body.style.overflow = 'hidden'
+    
     return () => {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = originalOverflow
     }
-  }, [])
+  }, [policyType])
 
   if (!policyType || !policies[policyType]) return null
   
